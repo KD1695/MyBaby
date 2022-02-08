@@ -5,6 +5,7 @@ using UnityEngine;
 public class BabyController : MonoBehaviour
 {
     [SerializeField] AudioSource audio;
+    [SerializeField] Rigidbody2D rigidbody;
 
     void Update()
     {
@@ -15,5 +16,9 @@ public class BabyController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         audio.Play();
+        if(collision.collider.gameObject.tag == "Wall" && !GameManager.Instance.isGrabbed)
+        {
+            rigidbody.AddForce(new Vector2((transform.position.x > 0) ? 200 : -200, 200));
+        }
     }
 }

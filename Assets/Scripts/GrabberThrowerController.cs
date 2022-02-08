@@ -60,7 +60,6 @@ public class GrabberThrowerController : MonoBehaviour
                 var rigidBody = baby.GetComponent<Rigidbody2D>();
                 baby = null;
                 rigidBody.isKinematic = false;
-                rigidBody.velocity = transform.up * GameManager.Instance.force;
                 rigidBody.AddForce(new Vector2(transform.up.x * GameManager.Instance.force, GameManager.Instance.force), ForceMode2D.Force);
             }
         }

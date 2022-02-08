@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 5422778149069993078}
+  rigidbody: {fileID: 5820167701673360247}
 --- !u!82 &5422778149069993078
 AudioSource:
   m_ObjectHideFlags: 0

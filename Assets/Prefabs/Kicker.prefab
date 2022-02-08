@@ -255,6 +255,11 @@ MonoBehaviour:
   babyHoldAnchor: {fileID: 0}
   isReversed: 1
   directionButton: {fileID: 5486155181575803091}
+  boxColliders:
+  - {fileID: 4118459488601246950}
+  - {fileID: 828641107073012199}
+  canvas: {fileID: 1853631755892264938}
+  raycaster: {fileID: 3684876101814869642}
 --- !u!114 &3684876101814869642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,7 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 3
+  m_BlockingObjects: 1
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -333,7 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

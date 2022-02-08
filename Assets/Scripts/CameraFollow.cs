@@ -16,10 +16,10 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
-        if (target == null || GameManager.Instance.isGrabbed) return;
+        if (target == null) return;
 
         targetPos = target.position;
-        transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, targetPos.y, -10), lerpSpeed * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, targetPos.y, -20), lerpSpeed * Time.deltaTime);
     }
 
 }
