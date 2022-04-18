@@ -64,14 +64,14 @@ public class GrabberThrowerController : MonoBehaviour
             }
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider2D)
     {
         if (memberType == CircusMember.Grabber)
         {
             if (babyHoldAnchor != null)
             {
-                collision.rigidbody.isKinematic = true;
-                baby = collision.collider.gameObject;
+                collider2D.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                baby = collider2D.gameObject;
                 baby.transform.position = babyHoldAnchor.position;
                 isBabyGrabbed = true;
                 GameManager.Instance.isGrabbed = true;
