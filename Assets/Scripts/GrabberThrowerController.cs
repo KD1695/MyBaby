@@ -31,18 +31,10 @@ public class GrabberThrowerController : MonoBehaviour
         counter += Time.deltaTime;
         int direction = 0;
         
-        if (Input.GetKey(KeyCode.A))
+        if (GameManager.Instance.isRotating)
         {
-            direction = -1 * isReversed;
-            GameManager.Instance.isRotating = true;
+            direction = GameManager.Instance.direction * isReversed;
         }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            direction = 1 * isReversed;
-            GameManager.Instance.isRotating = true;
-        }
-        else
-            GameManager.Instance.isRotating = false;
 
         if (counter >= 1 / 6)
         {

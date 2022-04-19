@@ -55,11 +55,15 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\UIButtonController.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GameOver.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\KickerController.cs" />
     <Compile Include="Assets\Scripts\GrabberThrowerController.cs" />
     <Compile Include="Assets\Scripts\BabyController.cs" />
-    <Compile Include="Assets\Scripts\GameOver.cs" />
+    <Compile Include="Assets\Scripts\LevelGenerator.cs" />
+    <Compile Include="Assets\Scripts\LevelPartGenerator.cs" />
+    <Compile Include="Assets\Scripts\CreateLevelPass.cs" />
+    <Compile Include="Assets\Scripts\SolidPass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

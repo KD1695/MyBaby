@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public bool isGrabbed = false;
     public int force = 100;
     public bool isRotating = false;
+    public int direction = 1;
+    public bool pass = false;
+    public int currentLevelMaxHeight = 100;
 
     //Prefabs references
     public GameObject KickerPrefab;
@@ -28,5 +31,18 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            isRotating = true;
+            direction = -1;
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            isRotating = true;
+            direction = 1;
+        }
+        else
+            isRotating = false;
     }
 }
