@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class SolidPass : MonoBehaviour
 {
     [SerializeField] Image image;
+    [SerializeField] bool isStartPassAllowed = true;
 
     private void Awake() 
     {
-        image.enabled = false;
-        this.GetComponent<BoxCollider2D>().isTrigger = true;
+        image.enabled = !isStartPassAllowed;
+        this.GetComponent<BoxCollider2D>().isTrigger = isStartPassAllowed;
     }
 
     private void OnTriggerExit2D(Collider2D other) 

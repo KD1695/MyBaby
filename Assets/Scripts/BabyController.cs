@@ -26,7 +26,7 @@ public class BabyController : MonoBehaviour
         audio.Play();
         if(collision.collider.gameObject.tag == "Wall" && !GameManager.Instance.isGrabbed)
         {
-            rigidbody.AddForce(new Vector2((transform.position.x > 0) ? -200 : 200, 200));
+            rigidbody.AddForce(new Vector2((transform.position.x > 0) ? -300 : 300, 300));
         }
     }
 }

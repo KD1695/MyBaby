@@ -23,6 +23,6 @@ public class LevelPartGenerator : MonoBehaviour
         var rectTransform = obj.GetComponent<RectTransform>();
         rectTransform.anchorMax = new Vector2(0.5f, 0);
         rectTransform.anchorMin = new Vector2(0.5f, 0);
-        rectTransform.position = new Vector3(posX, posY-90, 0);
+        rectTransform.position = new Vector3(posX, posY, 0);
     }
 }

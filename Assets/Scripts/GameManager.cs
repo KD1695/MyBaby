@@ -17,8 +17,12 @@ public class GameManager : MonoBehaviour
     public GameObject KickerPrefab;
     public GameObject GrabberPrefab;
     public GameObject CircusParent;
+    public GameObject Baby;
 
     public Camera MainCamera;
+
+    public TMPro.TextMeshProUGUI text;
+    int score = 0;
 
     private void Awake()
     {
@@ -44,5 +48,11 @@ public class GameManager : MonoBehaviour
         }
         else
             isRotating = false;
+
+        if(Baby.transform.position.y > score)
+        {
+            score = (int)Baby.transform.position.y;
+            text.text = "Score : " + score;
+        }
     }
 }

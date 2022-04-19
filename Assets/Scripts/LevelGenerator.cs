@@ -6,7 +6,7 @@ public class LevelGenerator : MonoBehaviour
 {
     [SerializeField] LevelPartGenerator partGenerator;
 
-    private List<LevelPartGenerator> levelPartsList = new List<LevelPartGenerator>();
+    private List<GameObject> levelPartsList = new List<GameObject>();
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class LevelGenerator : MonoBehaviour
             var levelPart = GameObject.Instantiate<LevelPartGenerator>(partGenerator, new Vector3(0, GameManager.Instance.currentLevelMaxHeight, 0), Quaternion.identity);
             GameManager.Instance.currentLevelMaxHeight += 100;
             levelPart.CreateLevel();
-            levelPartsList.Add(levelPart);
+            levelPartsList.Add(levelPart.gameObject);
             
             if(levelPartsList.Count >= 3)
             {
